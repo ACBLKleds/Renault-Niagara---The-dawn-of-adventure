@@ -47,15 +47,19 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ===== FONDO REAL — proporción vertical, scrollea con la página ===== */
+  /* ===== FONDO REAL — ancho de pantalla, proporción 1080x1920, nunca se deforma ===== */
   .bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    aspect-ratio: 1080 / 1920;
     z-index: 0;
-    background: url('bg_vertical.png') top center / 100% auto no-repeat;
+  }
+
+  .bg img {
+    display: block;
+    width: 100%;
+    height: auto; /* mantiene proporción 1080x1920 siempre */
   }
 
   .bg::after {
@@ -412,7 +416,7 @@
 </head>
 <body>
 
-<div class="bg"></div>
+<div class="bg"><img src="bg_vertical.png" alt=""></div>
 
 <div class="offline" id="offlineBadge">Offline</div>
 
