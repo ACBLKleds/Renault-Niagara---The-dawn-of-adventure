@@ -47,9 +47,9 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ===== FONDO REAL — ancho de pantalla, proporción 1080x1920, nunca se deforma ===== */
+  /* ===== FONDO REAL — fijo, ancho de pantalla, proporción 1080x1920, nunca se deforma ===== */
   .bg {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -406,6 +406,35 @@
     background: rgba(255,255,255,0.05);
     color: var(--white);
     border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  /* ===== RESPONSIVE — teléfonos ===== */
+  @media (max-width: 640px) {
+    .app { padding: 0 18px 48px; }
+    .header { padding-top: 36px; }
+    .header-logo { width: 150px; }
+    .header-day { font-size: 10px; letter-spacing: 3px; margin-top: 16px; }
+    .header-sub { font-size: 11px; margin-top: 6px; }
+    .day-tabs { gap: 16px; margin-top: 16px; }
+    .day-tab { min-width: 64px; padding: 6px 10px 8px; }
+    .day-tab .tab-day { font-size: 18px; }
+    .alert { font-size: 12px; padding: 12px 14px; margin: 14px 0 6px; }
+    .agenda-card { padding: 16px; margin-top: 16px; }
+    .agenda-title { font-size: 10px; margin-bottom: 12px; padding-bottom: 10px; }
+    .item { gap: 10px; padding: 10px 0; }
+    .item-time-box { min-width: 52px; }
+    .item-time { font-size: 13px; }
+    .item-time-end { font-size: 10px; }
+    .item-dot { margin-top: 6px; }
+    .item-title { font-size: 14px; }
+    .item-sub { font-size: 12px; }
+    .item-room { font-size: 9px; padding: 2px 8px; }
+    .reveal-cell { padding: 8px 10px; }
+    .reveal-cell .rv { font-size: 11px; }
+    .divider { margin: 12px 0 8px; }
+    .fab { padding: 12px 18px 22px; }
+    .fab-btn { padding: 10px 18px; font-size: 10px; }
+    .footer { padding-top: 28px; padding-bottom: 24px; }
   }
 
   /* ===== SCROLLBAR ===== */
